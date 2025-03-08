@@ -1,6 +1,6 @@
 # Build Whatever
 
-A retro-styled design challenge generator for whiteboard design practice, inspired by the screenshot provided.
+A retro-styled coding challenge generator
 
 ## Features
 
