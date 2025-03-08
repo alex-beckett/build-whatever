@@ -1,4 +1,4 @@
-# DesignerCize
+# Build Whatever
 
 A retro-styled design challenge generator for whiteboard design practice, inspired by the screenshot provided.
 
@@ -7,17 +7,13 @@ A retro-styled design challenge generator for whiteboard design practice, inspir
 - Retro terminal aesthetic with pixel art and CRT effects
 - Three difficulty levels: Easy, Medium, Hard
 - Random design challenge generator
-- Customizable timer
-- Play, pause, and stop controls
 
 ## How to Use
 
 1. Open `index.html` in your web browser
 2. Choose a difficulty level
 3. Click "Load Challenge" until you find a prompt you like
-4. Set your desired time duration using the up/down arrows
-5. Hit the play button to start the timer
-6. Complete your design challenge before the timer runs out!
+4. Complete your design challenge!
 
 ## Technologies Used
 
