@@ -1,0 +1,982 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    /* Replace gradient with the sky image */
+    background-image: url('images/sky.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative; /* For positioning background elements */
+}
+
+/* Cloud-like elements to enhance sky */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 25%),
+        radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 20%),
+        radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 30%),
+        radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 25%);
+    z-index: -3;
+    pointer-events: none;
+}
+
+/* Y2K gradient overlay */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -2;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Floating Shapes - adjusted for better visibility against sky */
+.y2k-shape {
+    position: fixed;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: -1;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+    filter: blur(2px);
+}
+
+.y2k-shape:nth-child(1) {
+    top: 10%;
+    left: 5%;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, #ff9ce3, #ffb8d9);
+    border-radius: 60% 40% 50% 50% / 40% 50% 50% 60%;
+    animation: float 20s ease-in-out infinite;
+}
+
+.y2k-shape:nth-child(2) {
+    top: 70%;
+    left: 15%;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 60%;
+    animation: float 25s ease-in-out infinite reverse;
+}
+
+.y2k-shape:nth-child(3) {
+    top: 20%;
+    right: 10%;
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(135deg, #fa709a, #fee140);
+    border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+    animation: float 22s ease-in-out infinite;
+}
+
+.y2k-shape:nth-child(4) {
+    bottom: 15%;
+    right: 20%;
+    width: 220px;
+    height: 220px;
+    background: linear-gradient(135deg, #6157ff, #ee49fd);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: float 18s ease-in-out infinite reverse;
+}
+
+.y2k-shape:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #00c6fb, #005bea);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    filter: blur(10px);
+    animation: float 30s ease-in-out infinite;
+    opacity: 0.4;
+}
+
+/* Star shapes - adjusted for sky background */
+.y2k-star {
+    position: fixed;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: -1;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9));
+}
+
+.y2k-star:nth-child(1) {
+    top: 15%;
+    left: 25%;
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: twinkle 4s ease-in-out infinite;
+}
+
+.y2k-star:nth-child(2) {
+    top: 75%;
+    left: 80%;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: twinkle 3s ease-in-out infinite 1s;
+}
+
+.y2k-star:nth-child(3) {
+    top: 30%;
+    left: 85%;
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: twinkle 5s ease-in-out infinite 0.5s;
+}
+
+.y2k-star:nth-child(4) {
+    top: 60%;
+    left: 10%;
+    width: 45px;
+    height: 45px;
+    background: #ffffff;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: twinkle 4.5s ease-in-out infinite 1.5s;
+}
+
+/* Add more decorative elements - adjusted for sky background */
+.y2k-circle {
+    position: fixed;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.y2k-circle:nth-child(1) {
+    top: 20%;
+    left: 30%;
+    width: 150px;
+    height: 150px;
+    border-color: rgba(255, 156, 227, 0.7);
+    animation: pulse 8s infinite;
+}
+
+.y2k-circle:nth-child(2) {
+    bottom: 25%;
+    right: 35%;
+    width: 200px;
+    height: 200px;
+    border-color: rgba(112, 214, 255, 0.7);
+    animation: pulse 12s infinite 2s;
+}
+
+.y2k-circle:nth-child(3) {
+    top: 40%;
+    right: 15%;
+    width: 120px;
+    height: 120px;
+    border-color: rgba(198, 164, 255, 0.7);
+    animation: pulse 10s infinite 1s;
+}
+
+/* Animations for background elements */
+@keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(30px, 40px) rotate(5deg);
+    }
+    50% {
+        transform: translate(15px, -30px) rotate(10deg);
+    }
+    75% {
+        transform: translate(-30px, 15px) rotate(5deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.8);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.8;
+    }
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+    width: 95vw;
+    height: 90vh;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: none;
+    position: relative;
+    z-index: 1;
+}
+
+/* Left Panel Styles - adjusted for sky background */
+.left-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    height: 100%; /* Ensure full height */
+}
+
+.terminal-window {
+    background: linear-gradient(135deg, rgba(255, 156, 227, 0.7), rgba(255, 184, 217, 0.7));
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    box-shadow: 
+        inset 0 0 20px rgba(255, 255, 255, 0.5),
+        5px 5px 20px rgba(0, 0, 0, 0.3),
+        -5px -5px 20px rgba(255, 255, 255, 0.2),
+        inset -3px -3px 10px rgba(0, 0, 0, 0.2),
+        inset 3px 3px 10px rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    position: relative;
+    min-height: 300px;
+    overflow: hidden; /* Contain everything inside */
+}
+
+.terminal-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    position: relative; /* Create stacking context */
+    z-index: 2; /* Ensure content is above decorative elements */
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logo-text {
+    font-size: 36px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.2),
+        -2px -2px 4px rgba(255, 255, 255, 0.4);
+    background: linear-gradient(135deg, 
+        #ff71ce 0%,
+        #b967ff 50%,
+        #01cdfe 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 8px rgba(126, 231, 252, 0.5));
+    font-family: 'Raleway', sans-serif;
+}
+
+@keyframes shine {
+    from {
+        background-position: 0% center;
+    }
+    to {
+        background-position: 200% center;
+    }
+}
+
+.description {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.instruction-item {
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.2;
+    position: relative;
+    padding-left: 45px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.instruction-item::before {
+    content: '✧';
+    position: absolute;
+    left: 15px;
+    color: #4facfe;
+    font-weight: bold;
+}
+
+/* Difficulty Buttons - adjusted for sky background */
+.difficulty-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    min-height: 86px;
+    position: relative;
+    z-index: 1;
+}
+
+.difficulty-btn {
+    flex: 1;
+    padding: 25px 20px;
+    font-size: 22px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #ffffff;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 
+        0 6px 10px rgba(0, 0, 0, 0.3),
+        inset 0 -4px 0 rgba(0, 0, 0, 0.2),
+        inset 0 4px 0 rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transform-style: preserve-3d;
+    transform: perspective(1000px) translateZ(0);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.difficulty-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.difficulty-btn:hover {
+    transform: perspective(1000px) translateZ(10px);
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.4),
+        inset 0 -4px 0 rgba(0, 0, 0, 0.2),
+        inset 0 4px 0 rgba(255, 255, 255, 0.2);
+}
+
+.difficulty-btn:hover::after {
+    opacity: 0.8;
+}
+
+.difficulty-btn:active {
+    transform: perspective(1000px) translateZ(-5px);
+    box-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.2),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.1),
+        inset 0 2px 0 rgba(255, 255, 255, 0.1);
+}
+
+.difficulty-btn.easy {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+.difficulty-btn.medium {
+    background: linear-gradient(135deg, #fa709a, #fee140);
+}
+
+.difficulty-btn.hard {
+    background: linear-gradient(135deg, #f83600, #f9d423);
+}
+
+.difficulty-btn.active {
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.difficulty-btn.active::after {
+    opacity: 0.8;
+}
+
+/* Reload Button - adjusted for sky background */
+.load-button {
+    width: 100%;
+    margin-top: 25px;
+    position: relative;
+    z-index: 1;
+    height: 80px; /* Fixed height */
+}
+
+.load-btn {
+    width: 100%;
+    height: 100%; /* Fill container */
+    background: linear-gradient(135deg, #6157ff, #ee49fd);
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 
+        0 8px 15px rgba(0, 0, 0, 0.3),
+        inset 0 -4px 0 rgba(0, 0, 0, 0.2),
+        inset 0 4px 0 rgba(255, 255, 255, 0.2);
+    transform-style: preserve-3d;
+    transform: perspective(1000px) translateZ(0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.load-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.load-btn:hover {
+    transform: perspective(1000px) translateZ(15px);
+    box-shadow: 
+        0 15px 25px rgba(0, 0, 0, 0.4),
+        inset 0 -4px 0 rgba(0, 0, 0, 0.2),
+        inset 0 4px 0 rgba(255, 255, 255, 0.2);
+}
+
+.load-btn:hover::after {
+    opacity: 0.8;
+}
+
+.load-btn:active {
+    transform: perspective(1000px) translateZ(-5px);
+    box-shadow: 
+        0 3px 8px rgba(0, 0, 0, 0.2),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.1),
+        inset 0 2px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Right Panel - adjusted for sky background */
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    height: 100%; /* Ensure full height */
+}
+
+.challenge-window {
+    flex: 1;
+    background: linear-gradient(135deg, rgba(255, 156, 227, 0.7), rgba(255, 184, 217, 0.7));
+    border-radius: 25px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 
+        inset 0 0 20px rgba(255, 255, 255, 0.5),
+        5px 5px 20px rgba(0, 0, 0, 0.3),
+        -5px -5px 20px rgba(255, 255, 255, 0.2),
+        inset -3px -3px 10px rgba(0, 0, 0, 0.2),
+        inset 3px 3px 10px rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add decorative elements to challenge window */
+.challenge-window::before {
+    content: '✧';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    animation: float 6s ease-in-out infinite;
+}
+
+.challenge-window::after {
+    content: '✧';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    animation: float 6s ease-in-out infinite reverse;
+}
+
+/* Additional star decorations */
+.challenge-window .star {
+    position: absolute;
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+}
+
+.challenge-window .star-top-left {
+    content: '✧';
+    top: 30px;
+    left: 25%;
+    animation: floatAndSpin 8s ease-in-out infinite;
+}
+
+.challenge-window .star-top-right {
+    content: '✧';
+    top: 30px;
+    right: 25%;
+    animation: floatAndSpin 7s ease-in-out infinite 1s;
+}
+
+.challenge-window .star-bottom-left {
+    content: '✧';
+    bottom: 30px;
+    left: 25%;
+    animation: floatAndSpin 7s ease-in-out infinite 0.5s;
+}
+
+.challenge-window .star-bottom-right {
+    content: '✧';
+    bottom: 30px;
+    right: 25%;
+    animation: floatAndSpin 8s ease-in-out infinite 1.5s;
+}
+
+@keyframes floatAndSpin {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(-10px) rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+        opacity: 0.4;
+    }
+}
+
+/* Add corner decorations */
+.challenge-window .corner {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+}
+
+.challenge-window .corner-top-left {
+    top: 20px;
+    left: 20px;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 20px 0 0 0;
+}
+
+.challenge-window .corner-top-right {
+    top: 20px;
+    right: 20px;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0 20px 0 0;
+}
+
+.challenge-window .corner-bottom-left {
+    bottom: 20px;
+    left: 20px;
+    border-right: none;
+    border-top: none;
+    border-radius: 0 0 0 20px;
+}
+
+.challenge-window .corner-bottom-right {
+    bottom: 20px;
+    right: 20px;
+    border-left: none;
+    border-top: none;
+    border-radius: 0 0 20px 0;
+}
+
+/* Add side decorations */
+.challenge-window .side-decoration {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.challenge-window .side-decoration-left,
+.challenge-window .side-decoration-right {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.challenge-window .side-decoration-left {
+    left: 20px;
+}
+
+.challenge-window .side-decoration-right {
+    right: 20px;
+}
+
+.challenge-window .side-decoration::before {
+    content: '❋';
+    animation: pulse 3s infinite;
+}
+
+.challenge-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.challenge-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.challenge-line {
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.15) 0%,
+        rgba(255, 255, 255, 0.05) 100%
+    );
+    border-radius: 8px;
+    box-shadow: 
+        inset 0 0 10px rgba(255, 255, 255, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px 15px;
+    margin: 8px 0;
+}
+
+.challenge-line:nth-child(2) {
+    margin-top: 10px;
+}
+
+.label {
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 32px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.value {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff6a88, #ff99ac);
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.separator {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: 4px;
+    margin: 20px 0;
+}
+
+.hashtag {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+.logo-small {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #00c6fb, #005bea);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 198, 251, 0.7);
+}
+
+.logo-small::before {
+    content: '✧';
+    color: white;
+}
+
+/* Y2K Bubble Elements - adjusted for sky background */
+.terminal-window::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    top: -30px;
+    right: -30px;
+    filter: blur(5px);
+    pointer-events: none;
+    z-index: 0; /* Ensure it's below content */
+}
+
+.challenge-window::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    bottom: -50px;
+    left: -50px;
+    filter: blur(8px);
+    pointer-events: none;
+    z-index: 0; /* Ensure it's below content */
+}
+
+.terminal-window,
+.challenge-window {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Make the text more stylized */
+.logo-text, .description, .instruction-item, 
+.challenge-line, .label, .value, .hashtag {
+    letter-spacing: 1px;
+}
+
+/* Add decorative elements - adjusted for sky background */
+.container::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    top: -100px;
+    left: -100px;
+    filter: blur(10px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    bottom: -50px;
+    right: -50px;
+    filter: blur(8px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+@media (min-width: 1600px) {
+    .container {
+        width: 90vw;
+        max-width: 1800px;
+    }
+    
+    .logo-text {
+        font-size: 54px;
+    }
+    
+    .description {
+        font-size: 32px;
+    }
+    
+    .instruction-item {
+        font-size: 28px;
+    }
+    
+    .difficulty-btn, .load-btn {
+        font-size: 28px;
+        padding: 30px;
+        height: 90px; /* Adjusted height for larger screens */
+    }
+    
+    .load-button {
+        height: 90px; /* Adjusted height for larger screens */
+    }
+    
+    .challenge-line {
+        font-size: 36px;
+    }
+    
+    .value {
+        font-size: 38px;
+    }
+    
+    .hashtag {
+        font-size: 38px;
+    }
+    
+    .difficulty-buttons {
+        min-height: 96px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 98vw;
+        gap: 20px;
+    }
+    
+    .difficulty-buttons {
+        min-height: 76px;
+    }
+    
+    .difficulty-btn, .load-btn {
+        height: 70px; /* Adjusted height for smaller screens */
+    }
+    
+    .load-button {
+        height: 70px; /* Adjusted height for smaller screens */
+    }
+}
+
+/* Add specific styling for the first challenge line */
+.challenge-line:first-child {
+    margin-bottom: 30px;
+} 
