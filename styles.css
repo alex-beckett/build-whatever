@@ -347,7 +347,7 @@ body {
 }
 
 .content-container {
-    background: rgba(255, 255, 255, 0.2); /* Very light, transparent background similar to desktop */
+    background: linear-gradient(135deg, rgba(180, 180, 255, 0.15), rgba(255, 180, 255, 0.15)); /* Subtle blue-pink gradient that matches the theme */
     border-radius: 20px;
     padding: 20px;
     width: 100%;
@@ -644,9 +644,10 @@ body {
     }
     
     .content-container {
-        background: rgba(255, 255, 255, 0.2); /* Very light, transparent background similar to desktop */
+        background: linear-gradient(135deg, rgba(180, 180, 255, 0.15), rgba(255, 180, 255, 0.15)); /* Subtle blue-pink gradient that matches the theme */
+        padding: 15px;
+        backdrop-filter: blur(5px);
         border-radius: 20px;
-        padding: 20px;
         width: 100%;
         text-align: center;
         border: 2px solid rgba(255, 255, 255, 0.7);
@@ -656,7 +657,6 @@ body {
             0 0 15px rgba(255, 255, 255, 0.3);
         position: relative;
         overflow: hidden;
-        backdrop-filter: blur(5px);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -746,7 +746,7 @@ body {
     }
     
     .content-container {
-        background: rgba(255, 255, 255, 0.2); /* Very light, transparent background similar to desktop */
+        background: linear-gradient(135deg, rgba(180, 180, 255, 0.15), rgba(255, 180, 255, 0.15)); /* Subtle blue-pink gradient that matches the theme */
         padding: 15px;
         backdrop-filter: blur(5px);
         border-radius: 20px;
