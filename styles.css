@@ -222,6 +222,7 @@ body {
     padding: 15px;
     position: relative;
     overflow: hidden;
+    font-weight: 600;
 }
 
 .load-challenge::before {
@@ -533,12 +534,22 @@ body {
         flex-direction: row;
         width: 100%;
         gap: 8px;
+        margin-bottom: 25px;
     }
     
-    .btn {
-        width: 100%;
-        padding: 10px 15px;
-        font-size: 14px;
+    .difficulty-buttons .btn {
+        padding: 8px 12px;
+        font-size: 13px;
+        min-height: 40px;
+    }
+    
+    .load-challenge {
+        padding: 15px 20px;
+        font-size: 16px;
+        min-height: 50px;
+        margin-top: 5px;
+        font-weight: 700;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     }
     
     .title-image {
@@ -562,9 +573,16 @@ body {
         padding: 20px;
     }
     
-    /* Improve touch targets for mobile */
     .btn {
-        min-height: 44px;
+        width: 100%;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .difficulty-buttons .btn {
+        padding: 8px 12px;
+        font-size: 13px;
+        min-height: 40px;
     }
     
     .background-elements {
@@ -590,8 +608,14 @@ body {
     }
     
     .difficulty-buttons {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 6px;
+    }
+    
+    .difficulty-buttons .btn {
+        padding: 6px 10px;
+        font-size: 12px;
+        min-height: 36px;
     }
     
     .title-image {
@@ -609,5 +633,10 @@ body {
     
     .content-container {
         padding: 15px;
+    }
+    
+    .load-challenge {
+        padding: 14px 18px;
+        min-height: 48px;
     }
 } 
