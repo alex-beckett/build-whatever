@@ -2,7 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Terminal Grotesque', 'Poppins', sans-serif;
+    font-family: 'Youre Gone', 'Terminal Grotesque', 'Poppins', sans-serif;
+}
+
+@font-face {
+    font-family: 'Youre Gone';
+    src: url('https://cdn.jsdelivr.net/gh/DimitriTuaz/youre-gone/dist/YoureGone-Regular.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/DimitriTuaz/youre-gone/dist/YoureGone-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -163,6 +172,7 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.7);
     position: relative;
     overflow: hidden;
+    font-family: 'Youre Gone', sans-serif;
 }
 
 .btn::before {
@@ -399,6 +409,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     letter-spacing: 2px;
+    font-family: 'Youre Gone', sans-serif;
 }
 
 .build-label::after, .on-label::after {
@@ -434,6 +445,7 @@ body {
     width: auto;
     min-width: 220px;
     text-align: center;
+    font-family: 'Youre Gone', sans-serif;
 }
 
 .game-type::before, .theme::before {
@@ -589,6 +601,26 @@ body {
         opacity: 0.8;
     }
     
+    .build-label, .on-label {
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        text-shadow: 
+            0 0 2px #fff,
+            0 0 5px #ffb6fc,
+            0 0 10px rgba(255, 182, 252, 0.7),
+            0 0 15px rgba(255, 182, 252, 0.5);
+        position: relative;
+        display: inline-block;
+        background: linear-gradient(to bottom, #ffffff, #ffb6fc, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: 2px;
+        font-family: 'Youre Gone', sans-serif;
+    }
+    
     .game-type, .theme {
         background: linear-gradient(to right, #ff7e7e, #ff5757);
         color: white;
@@ -609,25 +641,7 @@ body {
         width: auto;
         min-width: 200px;
         text-align: center;
-    }
-    
-    .build-label, .on-label {
-        color: white;
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 15px;
-        text-shadow: 
-            0 0 2px #fff,
-            0 0 5px #ffb6fc,
-            0 0 10px rgba(255, 182, 252, 0.7),
-            0 0 15px rgba(255, 182, 252, 0.5);
-        position: relative;
-        display: inline-block;
-        background: linear-gradient(to bottom, #ffffff, #ffb6fc, #ffffff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        letter-spacing: 2px;
+        font-family: 'Youre Gone', sans-serif;
     }
     
     .content-container {
@@ -723,11 +737,13 @@ body {
         font-size: 16px;
         padding: 8px 12px;
         min-width: 180px;
+        font-family: 'Youre Gone', sans-serif;
     }
     
     .build-label, .on-label {
         font-size: 18px;
         margin-bottom: 12px;
+        font-family: 'Youre Gone', sans-serif;
     }
     
     .content-container {
