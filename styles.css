@@ -553,7 +553,10 @@ body {
     }
     
     .title-image {
-        max-width: 250px;
+        max-width: 300px;
+        margin: 10px auto 20px;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+        animation: logo-glow 4s infinite alternate;
     }
     
     .bg-element {
@@ -591,6 +594,34 @@ body {
         width: 100%;
         overflow: hidden; /* Prevent background elements from causing scrollbars */
     }
+    
+    .logo-container {
+        margin-bottom: 25px;
+        transform: scale(1.05);
+    }
+    
+    .logo-text {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: gentle-pulse 3s infinite ease-in-out;
+    }
+    
+    @keyframes gentle-pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.03); }
+    }
+    
+    @keyframes logo-glow {
+        0% {
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+        }
+        100% {
+            filter: drop-shadow(0 4px 12px rgba(196, 113, 245, 0.6));
+        }
+    }
 }
 
 /* Small mobile devices */
@@ -619,7 +650,8 @@ body {
     }
     
     .title-image {
-        max-width: 200px;
+        max-width: 260px;
+        margin: 5px auto 15px;
     }
     
     .game-type, .theme {
