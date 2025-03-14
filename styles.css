@@ -7,10 +7,18 @@
 
 @font-face {
     font-family: 'Youre Gone';
-    src: url('https://cdn.jsdelivr.net/gh/DimitriTuaz/youre-gone/dist/YoureGone-Regular.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/DimitriTuaz/youre-gone/dist/YoureGone-Regular.woff') format('woff');
+    src: url('https://fonts.cdnfonts.com/s/13923/youregone.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Youre Gone Italic';
+    src: url('https://cdn.jsdelivr.net/gh/Typodermic-Fonts/youre-gone/YoureGoneIt.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/Typodermic-Fonts/youre-gone/YoureGoneIt.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
     font-display: swap;
 }
 
