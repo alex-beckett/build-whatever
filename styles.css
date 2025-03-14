@@ -348,8 +348,12 @@ body {
 
 .content-container {
     background: rgba(255, 255, 255, 0.2);
+    background-image: 
+        linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, 
+        rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+    background-size: 20px 20px;
     border-radius: 20px;
-    padding: 30px;
+    padding: 20px;
     width: 100%;
     text-align: center;
     border: 2px solid rgba(255, 255, 255, 0.7);
@@ -645,10 +649,6 @@ body {
     
     .content-container {
         background: rgba(255, 255, 255, 0.2);
-        background-image: 
-            linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, 
-            rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
-        background-size: 20px 20px;
         border-radius: 20px;
         padding: 20px;
         width: 100%;
@@ -664,6 +664,23 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    
+    .content-container::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: 
+            radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 10.5%) 0 0 / 15px 15px,
+            linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent) 0 0 / 20px 20px;
+        opacity: 0.5;
+        pointer-events: none;
+        z-index: 0;
+        animation: rainbow 10s linear infinite;
+        -webkit-animation: rainbow 10s linear infinite;
     }
     
     .difficulty-buttons .btn {
@@ -747,10 +764,6 @@ body {
     
     .content-container {
         background: rgba(255, 255, 255, 0.2);
-        background-image: 
-            linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, 
-            rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
-        background-size: 16px 16px;
         padding: 15px;
         backdrop-filter: blur(5px);
         border-radius: 20px;
@@ -766,6 +779,10 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    
+    .content-container::before {
+        background-size: 12px 12px, 16px 16px;
     }
     
     .load-challenge {
