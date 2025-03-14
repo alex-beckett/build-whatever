@@ -347,11 +347,7 @@ body {
 }
 
 .content-container {
-    background: rgba(255, 255, 255, 0.2);
-    background-image: 
-        linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, 
-        rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
-    background-size: 20px 20px;
+    background: rgba(255, 255, 255, 0.2); /* Very light, transparent background similar to desktop */
     border-radius: 20px;
     padding: 20px;
     width: 100%;
@@ -648,7 +644,7 @@ body {
     }
     
     .content-container {
-        background: rgba(255, 192, 203, 0.3); /* Light pink background that complements the design */
+        background: rgba(255, 255, 255, 0.2); /* Very light, transparent background similar to desktop */
         border-radius: 20px;
         padding: 20px;
         width: 100%;
@@ -750,7 +746,7 @@ body {
     }
     
     .content-container {
-        background: rgba(255, 192, 203, 0.3); /* Light pink background that complements the design */
+        background: rgba(255, 255, 255, 0.2); /* Very light, transparent background similar to desktop */
         padding: 15px;
         backdrop-filter: blur(5px);
         border-radius: 20px;
