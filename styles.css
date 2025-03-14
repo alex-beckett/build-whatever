@@ -648,7 +648,7 @@ body {
     }
     
     .content-container {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 192, 203, 0.3); /* Light pink background that complements the design */
         border-radius: 20px;
         padding: 20px;
         width: 100%;
@@ -750,7 +750,7 @@ body {
     }
     
     .content-container {
-        background: rgba(196, 113, 245, 0.25); /* Simple purple background that matches the theme */
+        background: rgba(255, 192, 203, 0.3); /* Light pink background that complements the design */
         padding: 15px;
         backdrop-filter: blur(5px);
         border-radius: 20px;
