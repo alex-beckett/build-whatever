@@ -103,7 +103,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .logo-text {
@@ -115,9 +115,9 @@ body {
 }
 
 .title-image {
-    max-width: 350px;
+    max-width: 320px;
     height: auto;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
 .build-text {
@@ -553,10 +553,9 @@ body {
     }
     
     .title-image {
-        max-width: 300px;
-        margin: 10px auto 20px;
+        max-width: 320px;
+        margin: 5px auto 10px;
         filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-        animation: logo-glow 4s infinite alternate;
     }
     
     .bg-element {
@@ -596,8 +595,8 @@ body {
     }
     
     .logo-container {
-        margin-bottom: 25px;
-        transform: scale(1.05);
+        margin-bottom: 15px;
+        transform: scale(1.1);
     }
     
     .logo-text {
@@ -606,21 +605,6 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        animation: gentle-pulse 3s infinite ease-in-out;
-    }
-    
-    @keyframes gentle-pulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.03); }
-    }
-    
-    @keyframes logo-glow {
-        0% {
-            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-        }
-        100% {
-            filter: drop-shadow(0 4px 12px rgba(196, 113, 245, 0.6));
-        }
     }
 }
 
@@ -650,8 +634,8 @@ body {
     }
     
     .title-image {
-        max-width: 260px;
-        margin: 5px auto 15px;
+        max-width: 280px;
+        margin: 0 auto 10px;
     }
     
     .game-type, .theme {
