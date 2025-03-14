@@ -23,7 +23,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow: hidden;
+    overflow: auto;
     position: relative;
 }
 
@@ -502,6 +502,9 @@ body {
         background-position: center;
         min-height: 100vh;
         padding: 20px 10px;
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
     
     .container {
@@ -509,6 +512,9 @@ body {
         align-items: center;
         gap: 15px;
         padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
     }
     
     .card {
@@ -560,12 +566,22 @@ body {
     .btn {
         min-height: 44px;
     }
+    
+    .background-elements {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        overflow: hidden; /* Prevent background elements from causing scrollbars */
+    }
 }
 
 /* Small mobile devices */
 @media (max-width: 480px) {
     .container {
         padding: 5px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 100%;
     }
     
     .card {
